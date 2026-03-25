@@ -334,7 +334,7 @@ static int __init ctf_init(void)
     }
 
     /* 3. Create the /sys/class entry so udev creates /dev/ctf */
-    ctf_class = class_create(THIS_MODULE, CLASS_NAME);
+    ctf_class = class_create(CLASS_NAME);
     if (IS_ERR(ctf_class)) {
         ret = PTR_ERR(ctf_class);
         pr_err("ctf: class_create failed (%d)\n", ret);
